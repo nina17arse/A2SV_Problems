@@ -11,3 +11,4 @@ class Solution:
             s[right]=t
             left+=1
             right-=1
+        
