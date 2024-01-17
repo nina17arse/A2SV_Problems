@@ -6,7 +6,7 @@ class Solution:
             currSum+=n
             difference=currSum - k
             res+=prefixSums.get(difference,0)
-            prefixSums[currSum]=1+prefixSums.get(currSum,0)
+            prefixSums[currSum]=prefixSums.get(currSum,0) + 1
         
         return res
 
