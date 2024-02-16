@@ -9,7 +9,7 @@ class Solution:
             return None
         leftPtr=head
         evenH=rightPtr=head.next
-        # print(leftPtr,rightPtr)
+        
         while rightPtr and rightPtr.next:
             leftPtr.next=leftPtr.next.next
             leftPtr=leftPtr.next
