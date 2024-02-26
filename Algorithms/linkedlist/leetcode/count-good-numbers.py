@@ -1,4 +1,5 @@
 class Solution:
+    @cache
     def countGoodNumbers(self, n: int) -> int:
         modNum=(10**9)+7
         if n%2 == 0:
