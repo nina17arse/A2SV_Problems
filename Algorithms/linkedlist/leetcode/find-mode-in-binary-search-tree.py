@@ -16,17 +16,6 @@ class Solution:
         if node.right:
             self.sol_rec(node.right,dic)
 
-        
-    
-        
-
-
-
-
-
-
-
-
     def findMode(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
             return []
