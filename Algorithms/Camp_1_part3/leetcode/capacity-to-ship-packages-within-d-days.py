@@ -10,40 +10,17 @@ class Solution:
                     curr = weights[i]
                     day += 1
             return (day + (1 if curr else 0) > days)
-            
-        low = max(weights)
-        high=sum(weights) 
-        ans = high
-        while low<=high:
-            m = low + ((high-low)//2)
-            if sol(m):
-                low = m+1
+        minW=max(weights)
+        maxW=sum(weights)
+        ans=0
+        while minW<=maxW:
+            mid=(minW+maxW)//2
+            if sol(mid):
+                minW=mid+1
             else:
-                high = m-1
-                ans = m
+                maxW=mid-1
+                ans=mid
         return ans
-
-
-
-
-
-
-
-
-
-
-
-
-# class Solution:
-#     def shipWithinDays(self, weights: List[int], days: int) -> int:
-#         minW=min(weights)
-#         maxW=sum(weights)
-#         while minW<=maxW:
-#             mid=(minW+maxW)//2
-#             if mid > days:
-#                 minW=mid+1
-#             else:
-#                 maxW=mid-1
-#         return mid//
+        
 
         
